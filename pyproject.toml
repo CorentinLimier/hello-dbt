@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hello-dbt"
+version = "0.1.0"
+description = "Hello dbt"
+authors = ["Corentin Limier"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.7"
+alembic="1.4.3"
+dbt="0.21.1"
+markupsafe="2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

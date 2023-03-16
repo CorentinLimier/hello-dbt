@@ -1,0 +1,71 @@
+
+version: 2
+
+sources:
+  - name: public
+    description: "Cocoloco Games datalake"
+    tables:
+      - name: games
+        description: "Cocoloco games"
+        columns:
+          - name: id
+            description: "Primary key of the table"
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Name of the game"
+            tests:
+              - not_null
+
+      - name: downloads
+        description: "Games downloads"
+        columns:
+          - name: id
+            description: "Primary key of the table"
+            tests:
+              - unique
+              - not_null
+          - name: id_game
+            description: "Id of the game"
+            tests:
+              - not_null
+          - name: downloaded_at
+            description: "Date of downloads"
+            tests:
+              - not_null
+
+models:
+  - name: download_counts_per_game
+    description: "Count nb of downloads per games"
+    columns:
+      - name: id_game
+        description: "Id of the game"
+        tests:
+          - unique
+          - not_null
+      - name: name_game
+        description: "Name of the game"
+        tests:
+          - not_null
+      - name: nb_downloads
+        description: "Number of downloads"
+        tests:
+          - not_null
+
+  - name: most_downloaded_game
+    description: "One line : most downloaded game"
+    columns:
+      - name: id_game
+        description: "Id of the game"
+        tests:
+          - unique
+          - not_null
+      - name: name_game
+        description: "Name of the game"
+        tests:
+          - not_null
+      - name: nb_downloads
+        description: "Number of downloads"
+        tests:
+          - not_null
