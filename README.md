@@ -32,3 +32,11 @@ make serve-catalog
 # Materialized options for dbt
 - ephemeral 
 - incremental / table / view
+
+# OpenLineage with marquez
+- Clone [marquez](https://github.com/MarquezProject/marquez) project
+```
+git clone git@github.com:MarquezProject/marquez.git
+```
+- See [this] to change marquez port mapping to avoid conflict with Airflow db  
+- Launch `./docker/up.sh`

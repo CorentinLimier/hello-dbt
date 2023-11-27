@@ -1,3 +1,5 @@
 alembic==1.4.3
-dbt==0.21.1
+snowflake-connector-python==2.4.1 # requires python <= 3.7
+dbt==0.21.0
 markupsafe==2.0.1
+openlineage-airflow

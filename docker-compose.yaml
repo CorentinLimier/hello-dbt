@@ -57,8 +57,10 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
     AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 10
+    AIRFLOW__LINEAGE__BACKEND: 'openlineage.lineage_backend.OpenLineageBackend'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     DBT_PROFILES_DIR: '/opt/airflow/dbt/'
+    OPENLINEAGE_URL: 'http://host.docker.internal:5000'
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
