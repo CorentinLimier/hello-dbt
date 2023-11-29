@@ -38,5 +38,5 @@ make serve-catalog
 ```
 git clone git@github.com:MarquezProject/marquez.git
 ```
-- See [this] to change marquez port mapping to avoid conflict with Airflow db  
+- See [this](https://github.com/MarquezProject/marquez/issues/1956#issuecomment-1103086809) to change marquez port mapping to avoid conflict with Airflow db  
 - Launch `./docker/up.sh`
